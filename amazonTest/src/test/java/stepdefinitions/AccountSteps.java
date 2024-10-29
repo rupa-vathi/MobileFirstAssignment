@@ -19,6 +19,15 @@ public class AccountSteps {
         this.wait=new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
+      @Given("I am logged into Facebook")
+    public void iAmLoggedIntoFacebook() {
+        driver.get("https://www.facebook.com/login");
+        driver.findElement(By.id("email")).sendKeys("ursrupavathi@gmail.com");
+        driver.findElement(By.id("pass")).sendKeys("Roopa@100");
+        driver.findElement(By.name("login")).click();
+        wait.until(ExpectedConditions.titleContains("Facebook"));
+    }
+
     @When("I update my account settings")
     public void updateAccountSettings() {
         WebElement nameField = driver.findElement(By.id("nameId"));
