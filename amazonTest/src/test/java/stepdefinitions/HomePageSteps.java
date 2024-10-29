@@ -54,7 +54,7 @@ public class HomePageSteps {
         driver.get("https://www.facebook.com/profile");
         driver.findElement(By.xpath("//div[@aria-label='Profile picture actions']")).click();
         WebElement uploadButton = driver.findElement(By.xpath("//input[@type='file']"));
-        uploadButton.sendKeys("path/to/new_profile_picture.jpg");
+        uploadButton.sendKeys("");
         driver.findElement(By.xpath("//button[text()='Save']")).click();
     }
 
