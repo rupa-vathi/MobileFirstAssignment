@@ -21,9 +21,9 @@ public class AccountSteps {
 
     @When("I update my account settings")
     public void updateAccountSettings() {
-        WebElement nameField = driver.findElement(By.id("name_field_id")); // Replace with actual ID
+        WebElement nameField = driver.findElement(By.id("nameId"));
         nameField.clear();
-        nameField.sendKeys("New Name");
+        nameField.sendKeys("RupaV");
         driver.findElement(By.xpath("//button[text()='Save Changes']")).click();
     }
 
